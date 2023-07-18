@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    color: white;
+}
+.active{
+    background: url('./1.svg');
+    background-size: 100%;
+    cursor: pointer;
+    animation: rotate 0.1s linear infinite;
+}
+.kletka{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    border: 1px solid white;
+   
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(-5deg);
+    }
+    50%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(-5deg);
+    }
+}
+.main{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2F70AF;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.main p{
+    text-align: center;
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.nav button{
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 0px;
+    background-color: #B9848C;
+    border-radius: 10px;
+}
+.nav button:hover{
+    background-color: #806491;
+    cursor: pointer;
+}
+
+.pole{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (max-width: 900px) and (min-width: 500px) {
+    .pole{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 499px) and (min-width: 300px){
+    *{
+        font-size: 25px;
+    }
+    .pole{
+        width: 95%;
+    }
+    .kletka{
+        width: 70px;
+        height: 70px;
+    }
+}
+@media screen and (max-width: 299px){
+    *{
+        font-size: 20px;
+    }
+    .pole{
+        width: 100%;
+    }
+    .kletka{
+        width: 60px;
+        height: 60px;
+    }
+}
