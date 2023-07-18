@@ -3,19 +3,44 @@
     padding: 0;
     font-size: 30px;
     color: white;
+    font-family: 'Bony';
 }
-.active{
-    background: url('./1.svg');
+@font-face {
+    font-family: 'Bony';
+    src: url('./fonts/Bony.otf');
+}
+.zombie{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    background: url('./img/1.svg');
     background-size: 100%;
     cursor: pointer;
     animation: rotate 0.1s linear infinite;
+}
+.people{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    background: url('./img/2.svg');
+    background-size: 100%;
+    cursor: pointer;
+    animation: rotate 0.1s linear infinite;
+}
+.zdanie{
+    background: url('./img/0.svg');
+    background-size: 100%;
 }
 .kletka{
     width: 100px;
     height: 100px;
     margin: 20px;
-    border: 1px solid white;
-   
+}
+.green{
+    color: #1eff00;
+}
+.red{
+    color: #ff0000;
 }
 @keyframes rotate{
     0%{
@@ -33,7 +58,7 @@
     width: 100%;
     justify-content: space-around;
     align-items: center;
-    background-color: #2F70AF;
+    background-color: #2C3039;
     min-height: 100vh;
     flex-direction: column;
 }
@@ -50,11 +75,11 @@
     margin-bottom: 10px;
     padding: 10px;
     border: 0px;
-    background-color: #B9848C;
+    background-color: #9EACB7;
     border-radius: 10px;
 }
 .nav button:hover{
-    background-color: #806491;
+    background-color: #6B3638;
     cursor: pointer;
 }
 
@@ -78,8 +103,9 @@
         width: 95%;
     }
     .kletka{
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
+        margin: 10px;
     }
 }
 @media screen and (max-width: 299px){
@@ -92,5 +118,6 @@
     .kletka{
         width: 60px;
         height: 60px;
+        margin: 10px;
     }
 }
