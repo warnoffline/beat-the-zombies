@@ -13,7 +13,7 @@
     width: 100px;
     height: 100px;
     margin: 20px;
-    background: url('./img/1.svg');
+    background: url('./img/1.png');
     background-size: 100%;
     cursor: pointer;
     animation: rotate 0.1s linear infinite;
@@ -22,13 +22,13 @@
     width: 100px;
     height: 100px;
     margin: 20px;
-    background: url('./img/2.svg');
+    background: url('./img/2.png');
     background-size: 100%;
     cursor: pointer;
     animation: rotate 0.1s linear infinite;
 }
 .zdanie{
-    background: url('./img/0.svg');
+    background: url('./img/0.png');
     background-size: 100%;
 }
 .kletka{
