@@ -48,7 +48,7 @@ function StartGame(){
         });
         let index = Math.floor(Math.random() * kletka.length);
         let zombieOrPeople = Math.floor(Math.random()*5)
-        if(zombieOrPeople < 3){
+        if(zombieOrPeople <= 3){
             kletka[index].classList.remove('zdanie');
             kletka[index].classList.add('zombie');
         }

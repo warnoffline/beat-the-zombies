@@ -9,6 +9,10 @@
     font-family: 'Bony';
     src: url('./fonts/Bony.otf');
 }
+.image{
+    display: flex;
+    flex-direction: row;
+}
 .img{
     background: url('./img/1.png');
     background-size: 100%;
@@ -108,11 +112,11 @@
         font-size: 25px;
     }
     .pole{
-        width: 95%;
+        width: 100%;
     }
     .kletka{
-        width: 80px;
-        height: 80px;
+        width: 95px;
+        height: 95px;
         margin: 10px;
     }
 }
