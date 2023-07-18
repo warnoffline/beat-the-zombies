@@ -1,10 +1,32 @@
-
+const highScoreDisplay = document.getElementById('highScoreDisplay');
+const previousScoresDisplay = document.getElementById('previousScoresDisplay');
 const game = document.getElementById('game')
+
+
 game.addEventListener('click', ()=>{
     StartGame()
     game.style.display = 'none'
 })
 let score = 0
+function saveScore(score) {
+    const highScore = localStorage.getItem('highScore');
+  
+    if (!highScore || score > highScore) {
+      localStorage.setItem('highScore', score);
+    }
+  
+    let previousScores = localStorage.getItem('previousScores');
+  
+    if (!previousScores) {
+      // Если список прошлых результатов пуст, создаем его с текущим результатом
+      previousScores = String(score);
+    } else {
+      // Иначе, добавляем текущий результат в конец списка
+      previousScores += ',' + score;
+    }
+  
+    localStorage.setItem('previousScores', previousScores);
+  }
 
 function StartGame(){
     score = 0;
@@ -83,7 +105,21 @@ function StartGame(){
             clearInterval(timerInterval);
             clearInterval(interval);
             game.style.display = 'inline'
+            saveScore(score);
+            const highScore = localStorage.getItem('highScore');
+            const previousScores = localStorage.getItem('previousScores') || '';
+
+            highScoreDisplay.textContent = highScore || '0';
+            previousScoresDisplay.textContent = previousScores.split(',').join(', ');
+            window.addEventListener('beforeunload', () => {
+                // Очищаем localStorage при обновлении страницы
+                localStorage.clear();
+              });
+              
         }
     }, 1000);
+
+
+    
     const interval = setInterval(RandomZombie, 1000);
 }

@@ -54,6 +54,10 @@
 .red{
     color: #ff0000;
 }
+.record{
+    width: 90%;
+    text-align: center;
+}
 @keyframes rotate{
     0%{
         transform: rotate(-5deg);
