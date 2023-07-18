@@ -9,6 +9,14 @@
     font-family: 'Bony';
     src: url('./fonts/Bony.otf');
 }
+.img{
+    background: url('./img/1.png');
+    background-size: 100%;
+}
+.img2{
+    background: url('./img/2.png');
+    background-size: 100%;
+}
 .zombie{
     width: 100px;
     height: 100px;
